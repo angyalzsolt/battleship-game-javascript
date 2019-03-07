@@ -17,7 +17,8 @@ function startGame(size){
 	ship1_row = randomPos(board);
 	ship1_col = randomPos(board);
 	// console.log('Ship', ship1_row, ship1_col)
-	showBoard(board);	
+	showBoard(board);
+	sendMsg('Let\'s start!');
 }	
 
 function getBoard(num){
@@ -66,18 +67,16 @@ const makeGuess = (row, col)=>{
 		}
 		showBoard(board);
 	}
-} catch(e){
-	sendMsg('Invalid input');
-}
-
-	
-
+	} catch(e){
+		sendMsg('Invalid input');
+	}
 }
 
 function resetBoard(){
 	document.querySelector('#target').innerHTML = '<h2>Battlefield</h2>';
 	guessRowEl.value = '';
 	guessColEl.value = '';
+	sendMsg('Set up your game.')
 	board = [];
 	ship1_row = 0;
 	ship1_col = 0;
@@ -93,8 +92,6 @@ document.querySelector('#start').addEventListener('submit', (e)=>{
 	e.preventDefault();
 	let s = e.target.elements.boardSize.value;
 	let f = parseInt(s)
-	console.log('the type is ', typeof f, f)
-
 	startGame(f);
 })
 
