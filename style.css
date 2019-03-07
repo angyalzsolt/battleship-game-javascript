@@ -1,0 +1,76 @@
+body {
+	font-family: 'ZCOOL QingKe HuangYou', cursive;
+	background-image: url('./img/bg2.jpg');
+	background-size: cover;
+	background-repeat: repeat;
+    background-position: center center;
+	text-align: center;
+	color: #53539e;
+}
+
+h1 {
+	font-size: 4rem;
+	margin: 5rem 0;
+}
+
+p{
+	font-size: 2.8rem;
+}
+
+input {
+	font-size: 1.9rem;
+	width: 5rem;
+	border: 2px solid grey;
+	border-radius: 5px;
+	text-align: center;
+}
+
+button {
+	font-size: 1.6rem;
+	border-radius: 10px;
+	padding: 0.6rem;
+	margin: 5px;
+	background-color: #DEDEDE;
+	border:2px solid #7f99c1;
+	color: #53539e;
+	transition: background .3s ease, color .3s ease;
+}
+
+button:hover {
+    background: #aab5b5;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	min-height: 30rem;
+	margin: auto;
+	border: 1.4rem solid #7f99c1;
+	border-radius: 10px;
+	box-shadow: 12px 12px 12px 12px grey;
+}
+.setup{
+	width: 20%;
+}
+
+.dashboard {
+	border: 1px solid blue;
+	width: 20%;
+}
+
+.battlefield{
+	border: 1px solid black;
+	width: 60%;
+}
+
+.field-row{
+	font-size: 4rem;
+	padding: 0;
+	margin: 0;
+}
+
+.menu-p{
+	margin: 10px;
+}
+

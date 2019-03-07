@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript Game</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+</head>
+<body>
+	<h1>Welcome to the arena </h1>
+<div class="container">
+
+
+	<div class="setup">
+		<form id="start">
+			<p>Start game</p>
+			<hr>
+			<p class="menu-p">Board size</p>
+			<input type="text" name="boardSize" id="boardSize" autocomplete="off">
+			<br>
+			<button id="start">Start</button>
+			<br>
+			
+		</form>
+		<button id="reset">Reset</button>
+	</div>
+
+
+	<div class="battlefield">
+		<p id="msg">Set up your game</p>
+		<hr>
+		<div id="target"><h2>Battlefield</h2></div>
+	</div>
+	
+
+	<div class="dashboard">
+		<form id="guess">
+			<p>Shoot from here</p>
+			<hr>
+			<p class="menu-p">Row</p>
+			<input type="text" name="row" id="guessRow" autocomplete="off">
+			<p class="menu-p">Column</p>
+			<input type="text" name="col" id="guessCol" autocomplete="off">
+			<br>
+			<button>Guess</button>
+		</form>
+		
+	</div>
+
+
+	
+</div>
+
+
+<script type="text/javascript" src="indexx.js"></script>
+</body>
+</html>
