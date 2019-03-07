@@ -16,7 +16,7 @@ function startGame(boardSize, shipsNum){
 	board = getBoard(boardSize);
 	// console.log('Board', board.length);
 	getShips(shipsNum);
-	console.log(ships)
+	// console.log(ships)
 	// console.log('Ship', ship1_row, ship1_col)
 	showBoard(board);
 	sendMsg('Let\'s start!', `There are ${ships.length - counter} ships left.`);
@@ -71,12 +71,12 @@ const makeGuess = (row, col)=>{
 
 	try{
 
-		if(JSON.stringify(ships).includes(JSON.stringify(guess))){
+		if(JSON.stringify(ships).includes(JSON.stringify(guess)) && board[guess[0]][guess[1]] === 'O'){
 			counter += 1;
-				if(ships.length == counter){
-					alert('Congratulations, destroyed everything');
-					return resetBoard();
-				};
+			if(ships.length == counter){
+				alert('Congratulations, destroyed everything');
+				return resetBoard();
+			};
 			sendMsg('Nice job, you destroyed a ship', `There are ${ships.length - counter} ships left`);
 
 			// alert(`Nice job, the ship was on row: ${row}, and column: ${col}`);
@@ -89,6 +89,9 @@ const makeGuess = (row, col)=>{
 			} else if(board[guess[0]][guess[1]] == 'X'){
 				sendMsg('You have already guessed it.');
 				return;
+			} else if(board[guess[0]][guess[1]] == '@'){
+				sendMsg('That\s already under the water.');
+				return;	
 			} else {
 				sendMsg('You missed it, try again');
 				board[guess[0]][guess[1]] = 'X';
