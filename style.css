@@ -40,6 +40,10 @@ button:hover {
     background: #aab5b5;
 }
 
+#counter {
+	font-size: 1.2rem!important;
+}
+
 .container {
 	display: flex;
 	justify-content: space-between;
